@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  
+
   <body>
     <header class="header-main">
       <div class="container">
@@ -474,19 +474,20 @@
             </li>
           </ul>
         </div>
-      
+
 <div class="footer-subscribe">
   <p class="footer-socials-title">Subscribe</p>
   <form class="subscribe-form" name="subscribe-form">
-    <label class="visually-hidden" for="subscribe-email">Email</label>
-    <input
-      class="subscribe-input"
-      type="email"
-      name="email"
-      id="subscribe-email"
-      placeholder="E-mail"
-      required
-    />
+    <label class="subscribe-label">
+      <input
+        class="subscribe-input"
+        type="email"
+        name="user-email"
+        id="subscribe-email"
+        placeholder="E-mail"
+        required
+      />
+    </label>
     <button class="subscribe-btn" type="submit">
       Subscribe
       <svg class="subscribe-icon" width="24" height="24" aria-hidden="true">
@@ -495,83 +496,142 @@
     </button>
   </form>
 </div>
-      </div>
+
     </footer>
-  
-<!-- Backdrop + Modal -->
-<div class="backdrop" data-modal aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button class="modal-close" type="button" data-modal-close aria-label="Close modal">
-      <svg width="8" height="8" aria-hidden="true"><use href="./images/icons.svg#SVG_2"></use></svg>
-    </button>
 
-    <p class="modal-title" id="modal-title">Leave your contacts and we will call you back</p>
+    <!-- Backdrop + Modal -->
+    <div class="backdrop" data-modal aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          data-modal-close
+          aria-label="Close modal"
+        >
+          <svg width="8" height="8" aria-hidden="true">
+            <use href="./images/icons.svg#SVG_2"></use>
+          </svg>
+        </button>
 
-    <form class="modal-form" name="order-form" autocomplete="off">
-      <!-- Name -->
-      <div class="form-field">
-        <label class="form-label" for="user-name">Name</label>
-        <div class="input-wrapper">
-          <input class="form-input" type="text" name="user-name" id="user-name" placeholder="John Doe" required />
-          <svg class="form-icon" width="18" height="24" aria-hidden="true"><use href="./images/icons.svg#icon-user"></use></svg>
-        </div>
+        <p class="modal-title" id="modal-title">
+          Leave your contacts and we will call you back
+        </p>
+
+        <form class="modal-form" name="order-form" autocomplete="off">
+          <!-- Name -->
+          <div class="form-field">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="John Doe"
+                required
+              />
+              <svg class="form-icon" width="18" height="24" aria-hidden="true">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div class="form-field">
+            <label class="form-label" for="user-phone">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder="+38 (___) ___-__-__"
+                required
+              />
+              <svg class="form-icon" width="18" height="24" aria-hidden="true">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="form-field">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder="mail@example.com"
+                required
+              />
+              <svg class="form-icon" width="18" height="24" aria-hidden="true">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- Comment -->
+          <div class="form-field">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              class="form-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <!-- Agreement -->
+          <div class="form-agreement" style="margin-bottom: 24px;">
+            <input
+              class="agree-checkbox visually-hidden"
+              type="checkbox"
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
+              required
+            />
+            <label class="agree-label" for="user-privacy">
+              <span class="custom-checkbox" aria-hidden="true">
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="policy-link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="modal-submit" type="submit">Send</button>
+        </form>
       </div>
-      <!-- Phone -->
-      <div class="form-field">
-        <label class="form-label" for="user-phone">Phone</label>
-        <div class="input-wrapper">
-          <input class="form-input" type="tel" name="user-phone" id="user-phone" placeholder="+38 (___) ___-__-__" required />
-          <svg class="form-icon" width="18" height="24" aria-hidden="true"><use href="./images/icons.svg#icon-phone"></use></svg>
-        </div>
-      </div>
-      <!-- Email -->
-      <div class="form-field">
-        <label class="form-label" for="user-email">Email</label>
-        <div class="input-wrapper">
-          <input class="form-input" type="email" name="user-email" id="user-email" placeholder="mail@example.com" required />
-          <svg class="form-icon" width="18" height="24" aria-hidden="true"><use href="./images/icons.svg#icon-mail"></use></svg>
-        </div>
-      </div>
-      <!-- Comment -->
-      <div class="form-field">
-        <label class="form-label" for="user-comment">Comment</label>
-        <textarea class="form-textarea" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
-      </div>
+    </div>
 
-      <!-- Agreement -->
-      <div class="form-agreement">
-        <input class="agree-checkbox visually-hidden" type="checkbox" id="agree" name="agree" required />
-        <label class="agree-label" for="agree">
-          <span class="custom-checkbox" aria-hidden="true">
-            <svg class="check-icon" width="10" height="8"><use href="./images/icons.svg#icon-check"></use></svg>
-          </span>
-          I accept the terms and conditions of the <a class="policy-link" href="#">Privacy Policy</a>
-        </label>
-      </div>
-
-      <button class="modal-submit" type="submit">Send</button>
-    </form>
-  </div>
-</div>
-
-<script>
-  // Modal open/close
-  (function(){
-    const openBtn = document.querySelector('.hero-btn');
-    const backdrop = document.querySelector('[data-modal]');
-    const closeBtn = document.querySelector('[data-modal-close]');
-    if (!openBtn || !backdrop || !closeBtn) return;
-    const toggle = (open) => {
-      backdrop.classList.toggle('is-open', open);
-      backdrop.setAttribute('aria-hidden', String(!open));
-      document.body.style.overflow = open ? 'hidden' : '';
-    };
-    openBtn.addEventListener('click', () => toggle(true));
-    closeBtn.addEventListener('click', () => toggle(false));
-    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) toggle(false); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggle(false); });
-  })();
-</script>
-
-</body>
+    <script>
+      // Modal open/close
+      (function () {
+        const openBtn = document.querySelector(".hero-btn");
+        const backdrop = document.querySelector("[data-modal]");
+        const closeBtn = document.querySelector("[data-modal-close]");
+        if (!openBtn || !backdrop || !closeBtn) return;
+        const toggle = (open) => {
+          backdrop.classList.toggle("is-open", open);
+          backdrop.setAttribute("aria-hidden", String(!open));
+          document.body.style.overflow = open ? "hidden" : "";
+        };
+        openBtn.addEventListener("click", () => toggle(true));
+        closeBtn.addEventListener("click", () => toggle(false));
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) toggle(false);
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") toggle(false);
+        });
+      })();
+    </script>
+  </body>
 </html>
